@@ -10,7 +10,6 @@ package com.pooyaspring.student;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentDetails" type="{http://pooyaspring.com/student}StudentDetails"/>
+ *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "studentDetails"
+    "status"
 })
-@XmlRootElement(name = "GetStudentDetailsResponse")
-public class GetStudentDetailsResponse {
+@XmlRootElement(name = "DeleteStudentDetailsResponse")
+public class DeleteStudentDetailsResponse {
 
-    @XmlElement(name = "StudentDetails", required = true)
-    protected StudentDetails studentDetails;
+    protected int status;
 
     /**
-     * Gets the value of the studentDetails property.
+     * Gets the value of the status property.
      * 
-     * @return
-     *     possible object is
-     *     {@link StudentDetails }
-     *     
      */
-    public StudentDetails getStudentDetails() {
-        return studentDetails;
+    public int getStatus() {
+        return status;
     }
 
     /**
-     * Sets the value of the studentDetails property.
+     * Sets the value of the status property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link StudentDetails }
-     *     
      */
-    public void setStudentDetails(StudentDetails value) {
-        this.studentDetails = value;
+    public void setStatus(int value) {
+        this.status = value;
     }
 
 }

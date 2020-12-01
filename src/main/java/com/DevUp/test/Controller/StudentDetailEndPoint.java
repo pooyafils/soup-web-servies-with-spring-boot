@@ -58,5 +58,16 @@ public class StudentDetailEndPoint {
         return response;
     }
 
+    //delete
+    @PayloadRoot(namespace = "http://pooyaspring.com/student",
+            localPart = "DeleteStudentDetailsRequest")
+    @ResponsePayload
+    public DeleteStudentDetailsResponse deleteprocessStudentDetailRequest(@RequestPayload DeleteStudentDetailsRequest request){
+        int status= studentDetailsService.deleteById(request.getId());
+        DeleteStudentDetailsResponse response=new DeleteStudentDetailsResponse();
+        response.setStatus(status);
+        return  response;
+    }
+
 
 }
