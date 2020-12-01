@@ -19,6 +19,8 @@ public class StudentDetailEndPoint {
     @ResponsePayload
     public GetStudentDetailsResponse processStudentDetailRequest(@RequestPayload GetStudentDetailsRequest request){
         Student student= studentDetailsService.findById(request.getId());
+        if(student==null)
+            throw new StudentNotFound("Invalid student id "+request.getId());
         return  mapStudentDetailRequest(student);
     }
 
@@ -32,7 +34,7 @@ public class StudentDetailEndPoint {
     }
 
 
-    /////////new code
+    //get all
     @PayloadRoot(namespace = "http://pooyaspring.com/student",
             localPart = "AllGetStudentDetailsRequest")
     @ResponsePayload
