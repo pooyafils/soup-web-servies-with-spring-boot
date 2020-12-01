@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetStudentDetailsResponse xmlns="http://pooyaspring.com/student"
+                          xsi:schemaLocation="http://pooyaspring.com/student student-details.xsd"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <StudentDetails>
+        <id>123</id>
+        <name>Spring </name>
+        <familyname>boot</familyname>
+    </StudentDetails>
+</GetStudentDetailsResponse>
