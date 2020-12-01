@@ -28,5 +28,17 @@
     </xs:complexType>
 
 
+    <xs:element name="AllGetStudentDetailsRequest">
+<xs:complexType>
+</xs:complexType>
+    </xs:element>
+    <xs:element name="AllGetStudentDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name= "StudentDetails" type="tns:StudentDetails" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 
 </xs:schema>
